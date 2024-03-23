@@ -1,9 +1,9 @@
 import React from "react";
 import ArtistCard from "./ArtistCard";
-
+import Style from "../styles/ArtistList.module.css";
 const ArtistList = ({ artists }) => {
   return (
-    <ul>
+    <ul className={Style.list}>
       {artists.map(({ id, name, images, external_urls }) => (
         <ArtistCard
           key={id}

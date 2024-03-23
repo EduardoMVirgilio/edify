@@ -1,0 +1,9 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    width: 48dvw;
+    max-height: 25dvh;
+    overflow-y: scroll;
+}

@@ -1,0 +1,32 @@
+.paginate {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: .25rem;
+}
+
+.paginate button {
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(48, 240, 198);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: rgb(16, 16, 16);
+    border-radius: 1rem;
+}
+
+.paginate button:disabled {
+    background-color: rgba(240, 240, 240, .7);
+}
+
+.paginate span {
+    background-color: rgb(48, 240, 198);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}

@@ -3,8 +3,8 @@ export const getArtists = async (token, page) => {
     q: 'genre:"argentine rock"',
     type: "artist",
     locale: "es-ES",
-    offset: Number(page) * 20,
-    limit: 20,
+    offset: Number(page) * 6,
+    limit: 6,
   });
   const endpoint = `${import.meta.env.VITE_API}/search?${data.toString()}`;
   const config = {};
