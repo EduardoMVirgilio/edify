@@ -7,3 +7,12 @@
     max-height: 25dvh;
     overflow-y: scroll;
 }
+
+@media screen and (max-width: 1280px) {
+    .list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: none;
+    }
+}

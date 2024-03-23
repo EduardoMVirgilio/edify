@@ -6,6 +6,7 @@
     height: calc(25dvh / 2 - 1rem);
     background-color: rgb(240, 240, 240);
     position: relative;
+    cursor: pointer;
 }
 
 .image {
