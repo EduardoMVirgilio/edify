@@ -3,7 +3,7 @@ import { persist, createJSONStorage } from "zustand/middleware";
 
 const data = (set) => ({
   token: null,
-  expire: 216000,
+  expire: 3240000,
   refresh: async () => {
     try {
       const endpoint = `${import.meta.env.VITE_TOKEN}`;
