@@ -3,7 +3,7 @@ export const getArtists = async (token, page) => {
     q: 'genre:"argentine rock"',
     type: "artist",
     locale: "es-ES",
-    offset: page * 20,
+    offset: Number(page) * 20,
     limit: 20,
   });
   const endpoint = `${import.meta.env.VITE_API}/search?${data.toString()}`;
@@ -14,4 +14,14 @@ export const getArtists = async (token, page) => {
   const request = await fetch(endpoint, config);
   const response = request.ok ? await request.json() : null;
   return response.artists ? response.artists.items : [];
+};
+
+export const getArtist = async (token, id) => {
+  const endpoint = `${import.meta.env.VITE_API}/artists/${id}`;
+  const config = {};
+  config.headers = {};
+  config.method = "GET";
+  config.headers["Authorization"] = `Bearer ${token}`;
+  const request = await fetch(endpoint, config);
+  return request.ok ? await request.json() : null;
 };
