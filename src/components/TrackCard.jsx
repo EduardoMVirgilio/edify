@@ -16,7 +16,11 @@ const TrackCard = ({ name, duration, preview, track_number, artist }) => {
         <p>{duration} min</p>
       </header>
 
-      <audio src={preview} controls></audio>
+      <audio
+        src={preview}
+        onPlay={(e) => (e.target.volume = 0.2)}
+        controls
+      ></audio>
     </li>
   );
 };
