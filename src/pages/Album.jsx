@@ -29,7 +29,7 @@ const Album = () => {
       {!album.isLoading && !tracks.isLoading && (
         <>
           <OneAlbum {...album.data} />
-          <TracksList tracks={tracks.data} />
+          <TracksList tracks={tracks.data} artist={album.data.artist} />
         </>
       )}
     </>

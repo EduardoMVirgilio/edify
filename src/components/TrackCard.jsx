@@ -1,6 +1,13 @@
 import React from "react";
 import Style from "../styles/TrackCard.module.css";
-const TrackCard = ({ name, duration, preview, track_number }) => {
+import { useQuery } from "@tanstack/react-query";
+import { getLyricBySong } from "../services/tracks.services";
+const TrackCard = ({ name, duration, preview, track_number, artist }) => {
+  const { data, isLoading } = useQuery({
+    queryKey: ["lyric", track_number],
+    queryFn: () => getLyricBySong(name, artist.name),
+  });
+  console.log(data);
   return (
     <li className={Style.track}>
       <header>
@@ -8,6 +15,7 @@ const TrackCard = ({ name, duration, preview, track_number }) => {
         <h2>{name}</h2>
         <p>{duration} min</p>
       </header>
+
       <audio src={preview} controls></audio>
     </li>
   );
