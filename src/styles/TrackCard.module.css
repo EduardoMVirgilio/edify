@@ -1,0 +1,51 @@
+.track {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(48, 240, 198);
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .25rem;
+    position: relative;
+}
+
+.track header {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.track header span {
+    font-weight: 700;
+    font-size: 1rem;
+    position: absolute;
+    top: -.75rem;
+    left: -.75rem;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: rgb(240, 192, 48);
+}
+
+.track header h2 {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.track header p {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.track audio {
+    height: 1rem;
+}

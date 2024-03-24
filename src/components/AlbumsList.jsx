@@ -6,7 +6,7 @@ const AlbumsList = ({ albums }) => {
   return (
     <ul className={Style.list}>
       {albums.map((album) => (
-        <AlbumCard {...album} />
+        <AlbumCard key={album.id} {...album} />
       ))}
     </ul>
   );
